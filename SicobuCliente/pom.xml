@@ -9,7 +9,7 @@
     <artifactId>SicobuCliente</artifactId>
     <packaging>jar</packaging>
     <properties>
-        <maven.compiler.release>26</maven.compiler.release>
+        <maven.compiler.release>25</maven.compiler.release>
         <exec.mainClass>cr.ac.una.sicobucliente.SicobuCliente</exec.mainClass>
     </properties>
 </project>
