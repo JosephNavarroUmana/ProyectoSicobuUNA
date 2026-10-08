@@ -1,13 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package cr.ac.una.sicobuws.util;
 
 /**
- *
- * @author Usuario
+ * Códigos HTTP que usa el servidor para responder al cliente.
  */
-public class CodigoRespuesta {
-    
+public enum CodigoRespuesta {
+    CORRECTO(200),
+    ERROR_CLIENTE(400),
+    ERROR_NO_AUTENTICADO(401),   // token JWT ausente, inválido o vencido
+    ERROR_ACCESO(403),           // autenticado pero sin permiso para la vista/acción
+    ERROR_NOENCONTRADO(404),
+    ERROR_INTERNO(500);
+
+    private Integer value;
+
+    private CodigoRespuesta(Integer value) {
+        this.value = value;
+    }
+
+    public Integer getValue() {
+        return value;
+    }
+
+    public void setValue(Integer value) {
+        this.value = value;
+    }
 }
